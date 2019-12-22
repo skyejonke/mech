@@ -15,7 +15,7 @@ class item {
 
 class weapon : public item {
 	public:
-		int getDamage();
+		virtual int getDamage() = 0;
 		int getwType();
 	protected:
 		int wtype;

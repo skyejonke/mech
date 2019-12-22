@@ -24,9 +24,6 @@ sword::sword(string nameIn, string descriptionIn, int damageIn){
 	wtype = 1;
 	type = 1;
 }
-int weapon::getDamage(){
-	return damage;
-}
 
 int sword::getDamage(){
 	return damage + 1;

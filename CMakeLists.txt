@@ -22,4 +22,4 @@ install(TARGETS mechlib
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib/static)
 enable_testing()
-add_test(NAME MainTest COMMAND mechtests)
+add_test(NAME MechTests COMMAND mechtests)

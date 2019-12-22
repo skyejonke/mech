@@ -15,18 +15,18 @@ TEST_CASE("Items work as intended", "[item]"){
 		REQUIRE(testBlade.getDescription() == "God's Blade");
 		REQUIRE(testBlade.getDamage() == 1001);
 	}
-	vector<weapon> weaponList = vector<weapon>();
+	vector<weapon*> weaponList = vector<weapon*>();
 	SECTION("Weapon interfaces work"){
-		weaponList.push_back(testBlade);
-		REQUIRE(weaponList[0].getDamage() == 1000);
-		REQUIRE(weaponList[0].getwType() == 1);
+		weaponList.push_back(&testBlade);
+		REQUIRE(weaponList[0]->getDamage() == 1001);
+		REQUIRE(weaponList[0]->getwType() == 1);
 	}
-	vector<item> itemList = vector<item>();
+	vector<item*> itemList = vector<item*>();
 	SECTION("Item interfaces work"){
-		itemList.push_back(testBlade);
-		REQUIRE(itemList[0].getName() == "God Blade");
-		REQUIRE(itemList[0].getType() == 1);
-		REQUIRE(itemList[0].getDescription()
+		itemList.push_back(&testBlade);
+		REQUIRE(itemList[0]->getName() == "God Blade");
+		REQUIRE(itemList[0]->getType() == 1);
+		REQUIRE(itemList[0]->getDescription()
 			== "God's Blade");
 	}
 }
