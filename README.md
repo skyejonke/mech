@@ -1,2 +1,4 @@
+[![Build Status](https://travis-ci.com/skyejonke/mech.svg?branch=master)](https://travis-ci.com/skyejonke/mech)
+
 # mech
-A Visual Novel Mech Game
+A Text-Based Mech Game
