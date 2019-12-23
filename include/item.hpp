@@ -48,4 +48,16 @@ class gun : public weapon {
 		int rangeMod;
 };
 
+class part : public item {
+	public:
+		int getPrice();
+		int getPower();
+		int getDefense();
+		int getaType();
 
+	private:
+		int price;
+		int powerNeeded;
+		int atype;
+		int defense;
+};
