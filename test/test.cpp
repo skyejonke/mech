@@ -16,6 +16,13 @@ TEST_CASE("Items work as intended", "[item]"){
 		REQUIRE(testBlade.getDescription() == "God's Blade");
 		REQUIRE(testBlade.getDamage() == 1001);
 	}
+	SECTION("Copy constructors work"){
+		gun testBlaster2 = gun(testBlaster);
+		REQUIRE(testBlaster2.getName() == "Laser Cannon");
+		REQUIRE(testBlaster2.getDescription() ==
+			"Shoots Lasers");
+		REQUIRE(testBlaster2.getDamage(0) == 10);
+	}
 	SECTION("Gun constructors work"){
 		REQUIRE(testBlaster.getName() == "Laser Cannon");
 		REQUIRE(testBlaster.getDescription() ==

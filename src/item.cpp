@@ -44,16 +44,16 @@ gun::gun(string nameIn,
 	type = 1;
 }
 
-/*gun::gun(gun other){
-	description = other.getDescription();
-	name = other.getName();
-	damage = other.getDamage(0);
-	clip = other.getClip();
-	rangeMod = other.getRangeMod();
+gun::gun(gun* other){
+	description = other->getDescription();
+	name = other->getName();
+	damage = other->getDamage(0);
+	clip = other->getClip();
+	rangeMod = other->getRangeMod();
 	wtype = 2;
 	type = 1;
 }
-*/
+
 
 int gun::getDamage(int range){
 	return (damage - (range * rangeMod));
@@ -69,4 +69,20 @@ int gun::getClip(){
 
 int gun::getRangeMod(){
 	return rangeMod;
+}
+
+int part::getPrice(){
+	return price;
+}
+
+int part::getPower(){
+	return powerNeeded;
+}
+
+int part::getDefense(){
+	return defense;
+}
+
+int part::getaType(){
+	return atype;
 }

@@ -38,7 +38,7 @@ class gun : public weapon {
 			int damageIn,
 			int clipIn, //if 0, infinity
 			int rangeModIn);
-		//gun(gun other);
+		gun(gun* other);
 		int getDamage(); //Assumes 0
 		int getDamage(int range);
 		int getClip();
